@@ -1,6 +1,7 @@
 ﻿string msg = "Selam";
 
-var stack = new Stack<char>();
+
+var stack = new DataStructures.Stack.Stack<char>();
 
 for (int i = 0; i < msg.Length; i++)
 {

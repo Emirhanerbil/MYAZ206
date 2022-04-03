@@ -1,8 +1,8 @@
-﻿using DataStructures.Stack;
+﻿using Stack;
 using Stack.Interfaces;
 using System.Collections;
 
-namespace Stack
+namespace DataStructures.Stack
 {
     public class Stack<T> : IStack<T>
     {
