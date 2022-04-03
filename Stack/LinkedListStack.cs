@@ -11,6 +11,9 @@ namespace Stack
 {
     public class LinkedListStack<T> : IStack<T>
     {
+        private bool isCountZero => Count == 0;
+
+
         private readonly SinglyLinkedList<T> _list;
         public LinkedListStack()
         {
@@ -32,12 +35,17 @@ namespace Stack
 
         public T Peek()
         {
-            return Count==0 ? default(T) : _list.Head.Value;
+            if (isCountZero) 
+            {
+                return default(T);
+            }
+            return _list.Head.Value;
+            
         }
 
         public T Pop()
         {
-            if (Count==0)
+            if (isCountZero)
             {
                 throw new Exception();
             }

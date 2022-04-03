@@ -11,6 +11,8 @@ namespace DataStructures.Stack
 {
     public class ArrayStack<T> : IStack<T>
     {
+        private bool isCountZero => Count == 0;
+
         private readonly Array<T> _array;
         public int Count => _array.Count;
         public ArrayStack()
@@ -25,14 +27,13 @@ namespace DataStructures.Stack
             }
         }
 
-        public IEnumerator<T> GetEnumerator()
-        {
-            return _array.GetEnumerator();
-        }
+        public IEnumerator<T> GetEnumerator() => _array.GetEnumerator();
+        
+
 
         public T Peek()
         {
-            if (Count ==0)
+            if (isCountZero)
             {
                 return default(T);
             }
@@ -41,7 +42,7 @@ namespace DataStructures.Stack
 
         public T Pop()
         {
-            if (Count == 0)
+            if (isCountZero)
             {
                 throw new Exception("Boş Stack");
             }
@@ -49,14 +50,10 @@ namespace DataStructures.Stack
             return result;
         }
 
-        public void Push(T item)
-        {
-            _array.Add(item);
-        }
+        public void Push(T item) => _array.Add(item);
+        
 
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        
     }
 }
