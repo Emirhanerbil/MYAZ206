@@ -1,4 +1,4 @@
-﻿using DataStructures.LinkedList.DoblyLinkedList;
+﻿using DataStructures.LinkedList.DoublyLinkedList;
 using System;
 using Xunit;
 

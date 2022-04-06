@@ -14,7 +14,7 @@ namespace Stack.Interfaces
 
         T Peek();
 
-        void Push(T item);
+        public void Push(T item);
 
     }
 }

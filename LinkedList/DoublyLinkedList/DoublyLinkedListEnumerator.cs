@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace DataStructures.LinkedList.DoblyLinkedList
+namespace DataStructures.LinkedList.DoublyLinkedList
 {
     internal class DoublyLinkedListEnumerator<T> : IEnumerator<T>
     {
